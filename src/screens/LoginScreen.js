@@ -13,8 +13,8 @@ import { COLORS } from '../styles/colors';
 
 export default function LoginScreen() {
   const dispatch = useDispatch();
-  const [email, setEmail] = useState('a');
-  const [password, setPassword] = useState('ax');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleLogin = () => {
     if (!email || !password) {
