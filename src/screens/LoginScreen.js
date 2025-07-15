@@ -40,7 +40,7 @@ export default function LoginScreen() {
       />
       <AppInput
         placeholder="Password"
-        value={email}
+        value={password}
         onChangeText={setPassword}
         keyboardType='password'
         autoCompleteType="password"
