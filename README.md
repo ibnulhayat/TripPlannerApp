@@ -1,4 +1,6 @@
-# Getting Started Trip Planner App
+# Getting Started Trip Planner App [Download APK](app-release.apk)
+
+
 
 ## Step 1: Start Metro and Build and run your app
 
@@ -65,14 +67,14 @@ A mobile application built with React Native CLI, designed to help users create 
 
 ## App Flow & Screens
 
-# 1. Login Screen
+## 1. Login Screen
     Simulates login using static credentials
 
     Dispatches auth/login() → sets isLoggedIn: true in Redux
 
     Login status is persisted using redux-persist
 
-# 2. Home Screen
+## 2. Home Screen
     User selects:
 
     Load Location
@@ -87,14 +89,14 @@ A mobile application built with React Native CLI, designed to help users create 
 
     Persisted automatically via Redux persist
 
-# 3. Trips Screen
+## 3. Trips Screen
     Lists created trips from Redux
 
     Allows trip deletion via trip/deleteTrip(id)
 
     Trips auto-loaded on app launch
 
-# 4. Settings Screen
+## 4. Settings Screen
     Shows user name + email (from Redux auth.user)
 
     Logout resets login state via auth/logout()
