@@ -131,7 +131,7 @@ export default function HomeScreen() {
           onPress={onCreateTrip}
         />
 
-        <BottomSheet visible={showBottomModal} setVisible={setShowBottomModal}>
+        <BottomSheet modalVisible={showBottomModal} setModalVisible={setShowBottomModal}>
           <View style={{marginHorizontal: 16}}>
             <Text style={styles.title}>{`Select ${loadType} Location`}</Text>
             <FlatList

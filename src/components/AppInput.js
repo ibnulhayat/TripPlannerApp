@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StyleSheet, TextInput, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, TextInput } from 'react-native';
 import { COLORS } from '../styles/colors';
 
 
@@ -9,7 +9,10 @@ export default function AppInput(props){
 
 
     return(
-        <View style={[styles.containerView, props?.customContainerStyle]}>
+        <Pressable 
+            style={[styles.containerView, props?.customContainerStyle]}
+            onPress={props?.onPress}
+        >
             
             <TextInput
                 style={[styles.inputText, props.inputStyle]}
@@ -32,7 +35,7 @@ export default function AppInput(props){
                 : null
             }
             
-        </View>
+        </Pressable>
     )
 }
 
