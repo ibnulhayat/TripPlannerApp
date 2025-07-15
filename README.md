@@ -1,5 +1,6 @@
-# Getting Started Trip Planner App [Download APK](app-release.apk)
+# Getting Started Trip Planner App 
 
+A workable apk with test credentials [Download APK](https://github.com/ibnulhayat/TripPlannerApp/app-release.apk) 
 
 
 ## Step 1: Start Metro and Build and run your app
