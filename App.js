@@ -1,8 +1,10 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { persistor, store } from './src/redux/store';
-import { PersistGate } from 'redux-persist/integration/react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import CustomSafeAreaProvider from './src/components/CustomSafeAreaProvider';
+import AppNavigator from './src/navigation/AppNavigator';
+import { persistor, store } from './src/redux/store';
 
 export default function App() {
   return (
@@ -15,7 +17,9 @@ export default function App() {
           </View>
         }
       >
-
+        <CustomSafeAreaProvider>
+          <AppNavigator />
+        </CustomSafeAreaProvider>
       </PersistGate>
     </Provider>
   )
