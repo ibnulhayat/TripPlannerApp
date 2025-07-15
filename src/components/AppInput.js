@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+import { Platform, StyleSheet, TextInput, View } from 'react-native';
 import { COLORS } from '../styles/colors';
 
 
@@ -41,7 +41,8 @@ const styles =  StyleSheet.create({
     containerView: {
         backgroundColor: COLORS.inputFieldBackColor,
         borderRadius: 8,
-        padding: 16,
+        paddingHorizontal: 16,
+        paddingVertical: Platform.OS == "ios" ? 16: 8,
         marginVertical: 12
     },
     inputText: {

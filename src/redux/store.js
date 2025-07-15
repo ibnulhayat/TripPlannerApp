@@ -3,16 +3,19 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistReducer, persistStore } from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import authReducer from './slices/authSlice';
+import tripReducer from './slices/tripSlice';
 
 
 const rootReducer = combineReducers({
-  auth: authReducer
+  auth: authReducer  ,
+  trip: tripReducer,
+
 })
 
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['auth'], // only persist these slices
+  whitelist: ['auth', 'trip'], // only persist these slices
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
