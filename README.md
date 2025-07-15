@@ -48,5 +48,53 @@ If everything is set up correctly, you should see your new app running in the An
 
 This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
-## Step 2: Modify your app
+## Step 2: Project Overview
+A mobile application built with React Native CLI, designed to help users create and manage trips. The UI follows a clean modular layout based on a provided [Figma design](https://www.figma.com/design/W4igb4ZIwHvpaTRYT8j2oj/Demo-Trip-Create?node-id=4-1139&t=aG5PTrja15uNS0Cd-0).
 
+## Tech Stack
+
+| Tool/Library            | Purpose                                     |
+| ----------------------- | ------------------------------------------- |
+| **React Native CLI**    | Native app framework                        |
+| **Redux Toolkit**       | State management                            |
+| **Redux Persist**       | Save Redux state (login + trips) to storage |
+| **AsyncStorage**        | Local storage for Redux persist             |
+| **React Navigation v6** | Stack + Tab navigation                      |
+| **Safe Area Context**   | Handles safe area on iOS/Android            |
+| **Custom Bottom Modal** | For location selection UX                   |
+
+## App Flow & Screens
+
+# 1. Login Screen
+    Simulates login using static credentials
+
+    Dispatches auth/login() → sets isLoggedIn: true in Redux
+
+    Login status is persisted using redux-persist
+
+# 2. Home Screen
+    User selects:
+
+    Load Location
+
+    Unload Location
+
+    Date & Time
+
+    Trips are created and stored using:
+
+    dispatch(trip/addTrip(...))
+
+    Persisted automatically via Redux persist
+
+# 3. Trips Screen
+    Lists created trips from Redux
+
+    Allows trip deletion via trip/deleteTrip(id)
+
+    Trips auto-loaded on app launch
+
+# 4. Settings Screen
+    Shows user name + email (from Redux auth.user)
+
+    Logout resets login state via auth/logout()
